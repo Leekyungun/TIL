@@ -26,6 +26,9 @@ MySQL 5.7 기준 제공하는 함수 리스트이다.
 
 ## INET_ATON
 
+함수 이름이 정말 안외워졌는데 internet_address to number 로 외우면 쉽게 외워지는것 같다. 
+
+
 ```mysql
 mysql> SELECT INET_ATON('10.0.5.9');
         -> 167773449
