@@ -81,3 +81,5 @@ $ git apply --whitespace=fix <patch>
 
 
 https://handam.tistory.com/127
+
+https://www.lesstif.com/gitbook/git-crlf-20776404.html
