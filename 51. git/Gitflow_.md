@@ -18,6 +18,19 @@ master 브랜치에서 develop 브랜치를 생성한다. master 브랜치는 �
 
 
 
+## Customflow
+Fork를 사용해 개발을 진행
+Upstream repo 에는 master, develop 브랜치만 존재
+개발자는 upstream repo을 fork하여 개발을 진행하고 develop 브랜치에 pull request를 요청
+pull request시에는 
+
+- master: 실제 서비스되는 운영서버의 브랜치
+- develop: 개발 브랜치
+- feature: 기능 개발 브랜치
+- release: 운영 서버 배포전 테스트 단계 브랜치
+- hotfix: 운영서버에서 발생한 버그를 수정하는 브랜치
+
+
 참고 문헌
 
 -  https://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html 
