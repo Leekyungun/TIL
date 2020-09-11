@@ -19,17 +19,38 @@ master 브랜치에서 develop 브랜치를 생성한다. master 브랜치는 �
 
 
 ## Customflow
+### 기존에 사용하던 방법
+
+1. 혼자 개발할때
+   master, develop 브랜치 두개를 사용하여 
+   develop에서 개발을 진행하고 배포하는 시점에 맞추어 master 브랜치에 merge하여 배포한다. 
+2. 2명 이상이 같이 개발할 때
+   master, develop, developer1, developer2 ... 
+   기존에 사용하던 방법에서  개발자의 수만큼 브랜치를 더 생성한다. 
+   개발자는 자신이 맡은 부분의 개발이 끝나면 develop 브랜치에 pull request를 하여 merge하고 
+   배포 시점에 맞추어 master 브랜치에 merge 한 뒤 배포한다.
+
+### 기존 방법의 문제점
+
+- 해당 작업을 rollback하기 어려움
+- develop 브랜치에 merge할 때 테스트가 부실함
+- 많은 merge commit으로 log가 지저분함
+- 저장소의 브랜치가 지저분함
+
+
+
+### 개선 사항
+
 Fork를 사용해 개발을 진행
 Upstream repo 에는 master, develop 브랜치만 존재
 개발자는 upstream repo을 fork하여 개발을 진행하고 develop 브랜치에 pull request를 요청
-pull request시에는 
+pull request시에는 squash merge를 통해 commit을 정리
 
 - master: 실제 서비스되는 운영서버의 브랜치
 - develop: 개발 브랜치
 - feature: 기능 개발 브랜치
 - release: 운영 서버 배포전 테스트 단계 브랜치
 - hotfix: 운영서버에서 발생한 버그를 수정하는 브랜치
-
 
 <확실한 부분>
 
